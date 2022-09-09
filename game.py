@@ -1,5 +1,4 @@
 import random
-
 import pgzrun
 import pgzero
 from pgzero import screen
@@ -36,7 +35,6 @@ def draw():
         pgzero.screen.Screen.blit(screen, "gameover.png", (0, 0))
     if len(bars_list) == 0:
         pgzero.screen.Screen.blit(screen, "win.png", (0, 0))
-
 
 
 def place_bars(x, y, image):
