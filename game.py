@@ -1,4 +1,5 @@
 import random
+
 import pgzrun
 import pgzero
 from pgzero import screen
@@ -31,7 +32,7 @@ def draw():
     ball.draw()
     for bar in bars_list:
         bar.draw()
-    if ball.y >= 520:
+    if ball.y >= 620:
         pgzero.screen.Screen.blit(screen, "gameover.png", (0, 0))
     if len(bars_list) == 0:
         pgzero.screen.Screen.blit(screen, "win.png", (0, 0))
@@ -85,12 +86,12 @@ def update_paddle():
         rand = random.randint(0, 1)
         if rand == 0:
             ball_x_speed *= -1
-    if paddle.x <= 75:
+    if paddle.x <= 50:
         if keyboard.left:
-            paddle.x = 75
-    if paddle.x >= WIDTH - 75:
+            paddle.x = 50
+    if paddle.x >= WIDTH - 50:
         if keyboard.right:
-            paddle.x = 725
+            paddle.x = 750
 
 
 coloured_box_list = ["element_red_rectangle_glossy.png",
